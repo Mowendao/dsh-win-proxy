@@ -6,11 +6,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy.git"
+    "url": "git+https://github.com/Mowendao/dsh-win-proxy.git"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy#readme",
+  "homepage": "https://github.com/Mowendao/dsh-win-proxy#readme",
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy/issues"
+    "url": "https://github.com/Mowendao/dsh-win-proxy/issues"
   },
   "exports": {
     ".": "./lib/index.js",
