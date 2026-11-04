@@ -12,6 +12,10 @@
   "bugs": {
     "url": "https://github.com/Mowendao/dsh-win-proxy/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./client": "./client.js",
