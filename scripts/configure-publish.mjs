@@ -18,9 +18,9 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 const EN_DESCRIPTION =
-  "Toggles the Windows system proxy (HKCU Internet Settings plus a WinINET refresh) together with the git, npm and pip proxy settings, from chat, the /proxy command or a Settings page.";
+  "Adds a Windows system-proxy switch to DeepSeek Harness: toggles the HKCU Internet Settings proxy with a WinINET refresh, together with the git, npm and pip proxy settings, from chat, the /proxy command or a Settings page.";
 const ZH_DESCRIPTION =
-  "一键开关 Windows 系统代理（写注册表并通知 WinINET 重载），同时切换 git、npm、pip 的代理配置，支持对话、/proxy 命令和设置页三个入口。";
+  "为 DeepSeek Harness 提供 Windows 系统代理开关：写注册表并通知 WinINET 重载，同时切换 git、npm、pip 的代理配置，支持对话、/proxy 命令和设置页三个入口。";
 const CATEGORY = "dev";
 
 function fail(message) {

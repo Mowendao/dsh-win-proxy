@@ -1,14 +1,21 @@
 # 代理开关 · Proxy Switch
 
-**一键开关 Windows 系统代理，并同步 git / npm / pip 的代理配置。**
+**给 DSH 补上它没有的系统代理开关：一键切换 Windows 系统代理，并同步 git / npm / pip 的代理配置。**
 
 在对话里说「开代理」，输入 `/proxy on`，或者打开 **设置 → 代理开关**。
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![platform: Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](#要求)
 
-本地代理客户端的开关，和编辑器里那一堆 `http.proxy` 之间，差的是一个记得住的状态。
-这个插件把它变成一条命令：开，全开；关，全关。
+## 背景
+
+DSH 本身不提供系统代理的开关。代理客户端（Clash / v2ray）开着，系统代理未必开着；就算开了，git、npm、pip 还各有各的 `http.proxy` 要改。
+
+- **DSH 管不到 Windows 的代理设置**：浏览器走不走代理，得另外去系统设置里点
+- **开发工具各有各的配置**：git 用 `git config`，npm 写 `.npmrc`，pip 写 `pip.ini`，逐个改容易漏
+- **忘了关更麻烦**：代理客户端退了，系统代理还指着那个端口，网就断了
+
+这个插件把这三件事合成一条命令：开，全开；关，全关。
 
 ## 功能
 
