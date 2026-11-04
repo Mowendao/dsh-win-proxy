@@ -49,7 +49,7 @@ dsh plugin --profile web add github:Mowendao/dsh-win-proxy
 dsh plugin --profile web add dsh-win-proxy
 ```
 
-> npm 包发布后可用；在那之前请用上一节的 GitHub 源。
+> 已发布到 npm，当前版本 `0.1.0`。npm 安装走预构建产物，不需要本地构建，也不用授权安装脚本。
 
 ### 你的 profile 不叫 web
 
