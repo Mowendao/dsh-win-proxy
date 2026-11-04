@@ -76,12 +76,25 @@ npm test   # npm/pip 文件编辑器单测 + 设置页模块冒烟测试（不�
 设置页是纯浏览器模块（`client.js`，无需构建），通过 `/api/dsh-win-proxy/{status,switch,config}` 与宿主通信，
 写操作要求同源 + JSON + `x-dsh-win-proxy: 1` 标记。改动客户端后刷新页面即可；改动宿主代码需重启 DSH。
 
-发布到 npm 前先指向自己的仓库：
+发布到 npm 前先指向自己的仓库（同一条命令会生成插件市场的投稿文件）：
 
 ```powershell
 node scripts/configure-publish.mjs https://github.com/<you>/dsh-win-proxy
 npm publish --access public
 ```
+
+## 上架插件市场
+
+市场目录来自 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)：
+一个插件一个 YAML 文件，路径为 `data/plugins/<owner>__<repo>.yml`，
+提 PR 后 CI 校验，通常一天内合并生效。
+
+上面的命令会在 `publish/data/plugins/` 生成该文件（`url` / `name` / `category` / 双语 `description`），
+把它复制进 fork 即可；PR 描述模板见 `publish/PR-BODY.md`。注意：
+
+- 条目里**不要**手写 `npm:` 字段——市场从 registry 自动采集，手写会被校验拒绝
+- 仓库需已添加 `dsh-plugin` topic，且创建满 1 天
+- npm 发布是可选的，但发布后 `repository` 必须指回收录的仓库
 
 ## 卸载
 
