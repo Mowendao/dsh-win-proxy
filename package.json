@@ -1,0 +1,62 @@
+{
+  "name": "dsh-win-proxy",
+  "version": "0.1.0",
+  "description": "Proxy Switch — toggle the Windows system proxy and git / npm / pip proxy settings from chat, the /proxy command, or a Settings page",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy.git"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy#readme",
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/dsh-win-proxy/issues"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "scripts": {
+    "test": "node test/editors.test.mjs && node test/client.test.mjs",
+    "configure": "node scripts/configure-publish.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "proxy",
+    "system-proxy",
+    "wininet",
+    "windows"
+  ],
+  "icon": "icon.svg"
+}

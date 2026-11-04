@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Proxy Switch",
+    "description": "Toggle the Windows system proxy and git / npm / pip proxy settings from chat or the /proxy command."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "代理开关",
+    "description": "在对话里或通过 /proxy 命令，一键开关 Windows 系统代理，并同步 git / npm / pip 的代理配置。"
+  }
+}

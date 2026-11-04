@@ -1,0 +1,16 @@
+# dsh-win-proxy bundle patch
+#
+# Inserts the Proxy Switch row into the current profile. `plugin_manager`
+# install_bundle applies this patch; the market installs from npm and applies
+# the same row.
+#
+# Optional config keys (the defaults below are what you get with `config: {}`):
+#   proxyServer: "127.0.0.1:7890"    # host:port, a full URL, or WinINET style
+#                                    # "http=host:port;https=host:port"
+#   bypass:      ""                  # empty = keep the existing ProxyOverride
+#   targets:     ["system", "git", "npm", "pip"]
+#   probePorts:  [7890, 7897, 10808, 10809, 1080, 8080, 8888, 33210]
+- insert:
+    - id: dsh-win-proxy
+      name: 'dsh-win-proxy'
+      config: {}
